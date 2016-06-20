@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload= function(){
+	var tags = document.body.getElementsByTagName("*");
+	var now = Number(tags[0].innerHTML);
+	var dis = 1;
+	tags[1].onclick = function(){
+		now += dis;
+		tags[0].innerHTML = now;
+		/*if(now == 5){
+			dis = -1;
+		}
+		if(now == 0){
+			dis = 1;
+		}*/
+		/*if(now == 5){
+			dis = -dis;
+		}
+		if(now == 0){
+			dis = -dis;
+		}*/
+		if(now == 5 || now == 0){
+			dis = -dis;
+		}
+	};
+//		var tags = document.body.getElementsByTagName("*");
+//	var now = Number(tags[0].innerHTML);
+//	tags[1].onclick = function(){
+//		now++;
+//		tags[0].innerHTML = (now%10 <= 5) ?  (now%10) : 10 - (now%10) ;
+//	};
+};
+/*
+	0  0
+	1   1
+	2  2
+	3  3
+	4  4
+	5  5
+	6  4
+	7  3
+	8  2
+	9  1
+	0  0
+*/
+</script>
+</head>
+<body>
+<h1>0</h1>
+<input type="button" value="下一步" />
+</body>
+</html>
